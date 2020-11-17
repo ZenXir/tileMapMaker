@@ -1,4 +1,4 @@
-﻿// Fill out your copyright notice in the Description page of Project Settings.
+// Fill out your copyright notice in the Description page of Project Settings.
 
 #include "tileMapMakerPlayerControlleCpp.h"
 #include "vertexData.h"
@@ -447,7 +447,7 @@ void AtileMapMakerPlayerControlleCpp::newMap(FString name, int32 Xnum, int32 Ynu
 		{
 			//tileData.Push(World->SpawnActor<AhexTile>(FVector((15 * w), 8.66 * 2 * h + (-8.66*Parity), 0.f), FRotator(0.f, 0.f, 0.f)));
 			tileData.Push(World->SpawnActor<AhexTile>(FVector(Xoffset*x + adjXoffset * Parity, Yoffset*y, 0.f), FRotator(0.f, 0.f, 0.f)));
-			initTileData(tileData[Xnum*x + y], x, y, Xnum*x + y);
+			initTileData(tileData[Ynum*x + y], x, y, Ynum*x + y);
 			Parity = !Parity;//奇偶翻转
 		}
 
